@@ -26,6 +26,7 @@ Content of the project folder:
 ├── .gitignore               # Git ignore file
 ├── index.html               # landing HTML file, this is what users see when you come to url
 ├── confirm.html             # restaurant confirmation HTML file, after QR scanner
+├── ResQMainPage.html        # main page after logging in. 
 └── README.md
 
 It has the following subfolders and files:
