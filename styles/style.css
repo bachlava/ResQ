@@ -1,0 +1,31 @@
+body {
+	text-align: center;
+}
+
+#confirm-prompt {
+	margin-top: 1em;
+}
+
+#img-restaurant {
+	width: 65%;
+	min-width: 300px;
+}
+
+#restaurant-container h4 {
+	top: 3em;
+	z-index: 1;
+	position: relative;
+	background-color: white;
+}
+
+#yes-no {
+	 width: 100%;;
+	 margin-top: 2em;
+	 font-size: 20pt;
+	 display: flex;
+}
+
+#yes-no form {
+	display: inline-block;
+	margin: auto;
+}
