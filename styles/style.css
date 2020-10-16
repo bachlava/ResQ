@@ -9,6 +9,7 @@ body {
 #img-restaurant {
 	width: 65%;
 	min-width: 300px;
+	max-width: 600px;
 }
 
 #restaurant-container h4 {
@@ -19,8 +20,9 @@ body {
 }
 
 #yes-no {
-	 width: 100%;;
-	 margin-top: 2em;
+	 min-width: 300px;
+	 max-width: 650px;
+	 margin: 2em auto;
 	 font-size: 20pt;
 	 display: flex;
 }
