@@ -17,7 +17,8 @@ This is a web application using QR scanner to let users quickly check-in at rest
 Technologies used for this project:
 * HTML, CSS
 * JavaScript
-* Bootstrap 
+* Bootstrap
+* Firebase (Auth, Firestore, Hosting)
 	
 ## Content
 Content of the project folder:
@@ -25,23 +26,31 @@ Content of the project folder:
 ```
  Top level of project folder: 
 ├── .gitignore               # Git ignore file
-├── index.html               # landing HTML file, this is what users see when you come to url
-├── confirm.html             # restaurant confirmation HTML file, after QR scanner
-├── ResQMainPage.html        # main page after logging in. 
+├── index.html               # Landing page
+├── login.html               # Login page
+├── ResQMainPage.html        # Main page after logging in, QR launcher
+├── confirm.html             # Restaurant confirmation page
+├── 404.html                 # Default "Not found" page
 └── README.md
 
 It has the following subfolders and files:
 ├── .git                     # Folder for git repo
 ├── images                   # Folder for images
-  └──  /taeji.jpg               # Sample restaurant image
+  ├──  /daeji.jpg               # Restaurant image
+	└──  /nadri.jpg               # Restaurant image
 ├── scripts                  # Folder for scripts
-  └──  /script.js               # JavaScript
+  └──  /confirm.js              # JavaScript for confirmation page
+	└──  /display.js              # JavaScript for navigation bar
+	└──  /firebase_api.js         # Firebase API access configuration
+	└──  /login.js                # Firebase auth login
 ├── styles                   # Folder for styles
   └──  /style.css               # CSS stylesheet
 
 Firebase hosting files: 
-├── .firebaserc...
-
+├── .firebaserc
+├── firebase.json
+├── firebase.indexes.json
+└── firebase.rules
 
 ```
 

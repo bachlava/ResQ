@@ -1,4 +1,8 @@
 body {
+	font-family: sans-serif;
+}
+
+#wrapper {
 	text-align: center;
 }
 
@@ -6,17 +10,27 @@ body {
 	margin-top: 1em;
 }
 
-#img-restaurant {
-	width: 65%;
-	min-width: 300px;
-	max-width: 600px;
+#restaurant-img-cropper {
+	display: inline-block;
+  overflow: hidden;
+	width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+#restaurant-img-cropper img {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+	width: auto;
 }
 
 #restaurant-container h4 {
 	top: 3em;
 	z-index: 1;
 	position: relative;
-	background-color: white;
+	background: rgba(255, 255, 255, 0.75);
+	color: black;
 }
 
 #yes-no {
