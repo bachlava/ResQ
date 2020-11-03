@@ -37,12 +37,12 @@ It has the following subfolders and files:
 ├── .git                     # Folder for git repo
 ├── images                   # Folder for images
   /daeji.jpg                   # Restaurant image
-	/nadri.jpg                   # Restaurant image
+  /nadri.jpg                   # Restaurant image
 ├── scripts                  # Folder for scripts
   /confirm.js                  # JavaScript for confirmation page
-	/display.js                  # JavaScript for navigation bar
-	/firebase_api.js             # Firebase API access configuration
-	/login.js                    # Firebase auth login
+  /display.js                  # JavaScript for navigation bar
+  /firebase_api.js             # Firebase API access configuration
+  /login.js                    # Firebase auth login
 ├── styles                   # Folder for styles
   /style.css                   # CSS stylesheet
 
