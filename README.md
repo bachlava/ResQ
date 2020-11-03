@@ -36,7 +36,7 @@ Content of the project folder:
 It has the following subfolders and files:
 ├── .git                     # Folder for git repo
 ├── images                   # Folder for images
-  ├──  /daeji.jpg               # Restaurant image
+  └──  /daeji.jpg               # Restaurant image
 	└──  /nadri.jpg               # Restaurant image
 ├── scripts                  # Folder for scripts
   └──  /confirm.js              # JavaScript for confirmation page
