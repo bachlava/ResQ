@@ -2,41 +2,38 @@
 <html>
 
 <head>
-<style>
-    .box {
-        text-align: center;
-        margin-left: 403px;
-    }
-    .table {
-        display: inline-table;
-    }
-    ul {
-        display: table-row;
-    }
-    li {
-        display: table-cell;
-        padding: 6em;
-    }
-    .listalignment {
-        margin-right: 70px;
-    }
-</style>
+	<meta charset="utf-8">
+	<title>ResQ Login</title>
+
+	<!-- Bootstrap for Mobile-first, and JQuery -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<!-- Firebase auth UI -->
+	<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
+
+	<link rel="stylesheet" href="styles/style.css" />
+	<style>
+	</style>
 </head>
+
 <body>
-    <dev class="box">
-        <dev class="box">
-            <img src="https://www.botlibre.com/media/a11675764-0.png" alt= "tick image">
-            <h1> QR is Successfully Scanned!</h1>
-        </dev>
-        <dev>
-            <p>"restaurantname" is scanned.</p>
-        </dev>
-        <dev class="listalignment">
-            <ul>
-                <li>Rescan</li>
-                <li>Continue</li>
-            </ul>
-        </dev>
-    </dev>
+	<div class="box">
+		<div>
+			<img src="https://www.botlibre.com/media/a11675764-0.png" alt="tick image">
+			<h1> QR is Successfully Scanned!</h1>
+		</div>
+		<div>
+			<p>Your contact tracing information was sent to Nadri.</p>
+		</div>
+		<div class="listalignment">
+			<span><a href="#">Rescan</a></span> 
+			<span><a href="ResQMainPage.html">Continue</a></span>
+		</div>
+	</div>
+
+	<script src="scripts/display.js"></script>
+	<script src="scripts/success.js"></script>
 </body>
+
 </html>

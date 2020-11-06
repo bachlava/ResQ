@@ -2,6 +2,10 @@ body {
 	font-family: sans-serif;
 }
 
+.nav-bg {
+	background-color: #00417F;
+}
+
 #wrapper {
 	text-align: center;
 }
@@ -34,11 +38,11 @@ body {
 }
 
 #yes-no {
-	 min-width: 300px;
-	 max-width: 650px;
-	 margin: 2em auto;
-	 font-size: 20pt;
-	 display: flex;
+	min-width: 300px;
+	max-width: 650px;
+	margin: 2em auto;
+	font-size: 20pt;
+	display: flex;
 }
 
 #yes-no form {
@@ -53,23 +57,25 @@ body {
 	border-radius: 350px;
 	margin-left: auto;
 	margin-right: auto;
-	
+	border: 1em solid #00417F;
 }
 
 .loginBox p {
 	height: 50px;
 	width: 100px;
-	background: #59AEFF;
+	background: #0069CC;
 	margin-left: auto;
 	margin-right: auto;
+	border: 3px solid #0082FF;
 }
 
 .newaccBox p {
 	height: 30px;
 	width: 200px;
-	background: #59AEFF;
+	background: #0069CC;
 	margin-left: auto;
 	margin-right: auto;
+	border: 3px solid #0082FF;
 }
 
 .grid {
@@ -77,14 +83,15 @@ body {
 	height: 100vh;
 	display: grid;
 	grid-template-columns: 100%;
-	grid-template-rows: 50% 20% 30%;
+	grid-template-rows: 25em 5em 5em;
+	color: white;
 }
 
 .welcome {
 	grid-area: 1 / 1 / span 1 / span 1;
 	display: flex;
-	   align-items: center; 
-	   justify-content: center;
+	align-items: center; 
+	justify-content: center;
 }
 
 .welcome p {
@@ -96,8 +103,8 @@ body {
 .login {
 	grid-area: 2 / 1 / span 1 / span 1;
 	display: flex;
-	   align-items: center; 
-	   justify-content: center;
+	align-items: center; 
+	justify-content: center;
 }
 
 .login p{
@@ -109,12 +116,59 @@ body {
 .newacc{
 	grid-area: 3 / 1 / span 1 / span 1;
 	display: flex;
-	   align-items: top; 
-	   justify-content: center;
+	align-items: top; 
+	justify-content: center;
 }
 
 .newacc p{
 	font-size: 12pt;
 	text-align: center;
 	font-weight: bold;
+}
+
+#circle {
+	width: 350px;
+	height: 350px;
+	background: #0082FF;
+	border-radius: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+	border: 1em solid #00417F;
+}
+
+#bar {
+	width: 350px;
+	height: 50px;
+	background: #0069CC;
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+	border: 3px solid #0082FF;
+}
+
+#circle p {
+	font-size: 36pt;
+	text-align: center;
+	font-weight: bold;
+}
+
+#bar p {
+	font-size: 24pt;
+	text-align: center;
+	font-weight: bold;
+}
+
+.box {
+	text-align: center;
+	margin: auto;
+}
+
+.listalignment {
+	min-width: 300px;
+	max-width: 650px;
+	margin: 2em auto;
+	font-size: 20pt;
+	display: flex;
+	justify-content: space-evenly;
 }
