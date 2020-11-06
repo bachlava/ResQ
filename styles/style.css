@@ -49,7 +49,7 @@ body {
 .circle {
 	width: 350px;
 	height: 350px;
-	background: grey;
+	background: #0082FF;
 	border-radius: 350px;
 	margin-left: auto;
 	margin-right: auto;
@@ -59,15 +59,15 @@ body {
 .loginBox p {
 	height: 50px;
 	width: 100px;
-	background: grey;
+	background: #59AEFF;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .newaccBox p {
 	height: 30px;
-	width: 175px;
-	background: grey;
+	width: 200px;
+	background: #59AEFF;
 	margin-left: auto;
 	margin-right: auto;
 }
