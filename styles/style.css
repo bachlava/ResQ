@@ -45,3 +45,76 @@ body {
 	display: inline-block;
 	margin: auto;
 }
+
+.circle {
+	width: 350px;
+	height: 350px;
+	background: grey;
+	border-radius: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+.loginBox p {
+	height: 50px;
+	width: 100px;
+	background: grey;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.newaccBox p {
+	height: 30px;
+	width: 175px;
+	background: grey;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.grid {
+	width: auto;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 50% 20% 30%;
+}
+
+.welcome {
+	grid-area: 1 / 1 / span 1 / span 1;
+	display: flex;
+	   align-items: center; 
+	   justify-content: center;
+}
+
+.welcome p {
+	font-size: 36pt;
+	text-align: center;
+	font-weight: bold;
+}
+
+.login {
+	grid-area: 2 / 1 / span 1 / span 1;
+	display: flex;
+	   align-items: center; 
+	   justify-content: center;
+}
+
+.login p{
+	font-size: 24pt;
+	text-align: center;
+	font-weight: bold;
+}
+
+.newacc{
+	grid-area: 3 / 1 / span 1 / span 1;
+	display: flex;
+	   align-items: top; 
+	   justify-content: center;
+}
+
+.newacc p{
+	font-size: 12pt;
+	text-align: center;
+	font-weight: bold;
+}
