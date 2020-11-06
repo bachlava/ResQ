@@ -2,41 +2,71 @@
 <html>
 
 <head>
-<style>
-    .box {
-        text-align: center;
-        margin-left: 403px;
-    }
-    .table {
-        display: inline-table;
-    }
-    ul {
-        display: table-row;
-    }
-    li {
-        display: table-cell;
-        padding: 6em;
-    }
-    .listalignment {
-        margin-right: 70px;
-    }
-</style>
+    <style>
+        body {
+            text-align: center;
+            width: 100%;
+            
+        }
+        html
+
+        .box {
+            text-align: center;
+            width: 100%;
+            margin-top: 50px;
+            background-color: whitesmoke;
+            border: bisque solid 5px;
+
+        }
+        .imagebox {
+            background: white;
+            border-radius: 50%;
+            shape-outside: circle();
+        }
+
+        .table {
+            display: inline-table;
+        }
+
+        ul {
+            display: table-row;
+            
+        }
+
+        li {
+            display: table-cell;
+            padding: 6em;
+        }
+
+        
+    </style>
 </head>
+
 <body>
-    <dev class="box">
-        <dev class="box">
-            <img src="https://www.botlibre.com/media/a11675764-0.png" alt= "tick image">
-            <h1> QR is Successfully Scanned!</h1>
-        </dev>
-        <dev>
-            <p>"restaurantname" is scanned.</p>
-        </dev>
+    <div class="box">
+
+            <img class="imagebox" src="https://www.botlibre.com/media/a11675764-0.png" alt="tick image">
+            <h1> QR Code is Successfully Scanned!</h1>
+     
+            <p>"restaurantname" is found.</p>
+  
         <dev class="listalignment">
             <ul>
-                <li>Rescan</li>
-                <li>Continue</li>
+                <li id="button1"><button onclick="myfunction()">Rescan</button></li>
+                <li id="button2"><button onclick="myfunction()">Continue</button></li>
             </ul>
         </dev>
-    </dev>
+    </div>
+    <script>
+        
+            document.getElementById("button1").onclick = function () {
+                location.href = "ResQMainPage.html";
+            };
+            document.getElementById("button2").onclick = function () {
+                location.href = "ResQMainPage.html";
+            };
+   
+    </script>
 </body>
+
 </html>
