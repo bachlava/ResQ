@@ -1,5 +1,5 @@
-let navigation = '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">'
-								+ '<a class="navbar-brand" href="">ResQ</a>'
+let navigation = '<nav class="navbar navbar-expand-lg navbar-dark bg-info">'
+								+ '<a class="navbar-brand" href="index.html">ResQ</a>'
 								+ '<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">'
 								+ '<span class="navbar-toggler-icon"></span></button>'
 								+ '<div class="collapse navbar-collapse" id="navbarTogglerDemo02">'
