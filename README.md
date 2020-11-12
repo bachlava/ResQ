@@ -12,14 +12,14 @@
 
 ## General Info
 This is a web application using QR scanner to let users quickly check-in at restaurants for contact tracing.
-	
+
 ## Technologies
 Technologies used for this project:
 * HTML, CSS
 * JavaScript
 * Bootstrap
 * Firebase (Auth, Firestore, Hosting)
-	
+
 ## Content
 Content of the project folder:
 
@@ -29,6 +29,7 @@ Content of the project folder:
 ├── index.html               # Landing page
 ├── login.html               # Login page
 ├── ResQMainPage.html        # Main page after logging in, QR launcher
+├── scan.html                # QR scanner page
 ├── confirm.html             # Restaurant confirmation page
 ├── 404.html                 # Default "Not found" page
 └── README.md
@@ -43,6 +44,8 @@ It has the following subfolders and files:
   /display.js                  # JavaScript for navigation bar
   /firebase_api.js             # Firebase API access configuration
   /login.js                    # Firebase auth login
+	/scan.js                     # Javascript for displaying QR scanner
+	/instascan.min.js            # HTML5 QR Scanner API
 ├── styles                   # Folder for styles
   /style.css                   # CSS stylesheet
 

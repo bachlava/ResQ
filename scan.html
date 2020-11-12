@@ -3,10 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>ResQ Main</title>
-	<meta name="comp1800 boilerplate code" content="my bcit project">
-	<meta name="author" content="BCIT">
-
+	<title>ResQ QR Scanner</title>
 	<!-- Bootstrap for Mobile-first, and JQuery -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -14,6 +11,9 @@
 	<!-- Optional styles and scripts of your own -->
 	<link rel="stylesheet" href="styles/style.css" />
 	<style>
+		body {
+			background-color: #222222;
+		}
 	</style>
 </head>
 
@@ -21,33 +21,31 @@
 	<!-------------------------------------->
 	<!-- The following is HTML for layout -->
 	<!-------------------------------------->
-	<br /><br /><br />
-	<div id="circle">
-		<br /><br /><br /><br />
-		<p>
-			<a href="scan.html">Scan<br>QR Code</a>
-		</p>
+	<div id="camera-wrapper">
+		<a href="ResQMainPage.html">
+			<div class="btn btn-secondary" id="back-btn">X</div>
+		</a>
+		<div class="btn btn-secondary" id="swap-btn" name="switch" backCam="false">Swap</div>
+		<video id="preview"></video>
 	</div>
-	<br><br><br><br>
-	<div id="bar">
-		<p>No QR Code?</p>
-	</div>
-
 	<!----------------------------------------------->
 	<!-- JS: Boostrap, Firebase, API related    -->
 	<!----------------------------------------------->
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
 	</script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
 	</script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
 
 	<!--------------------------------------------------------------------->
 	<!-- JS files: Your own JavaScript functions included here    -->
 	<!--------------------------------------------------------------------->
-	<script src="scripts/display.js"></script>
-
+	<script src="scripts/instascan.min.js"></script>
+	<script type="text/javascript" src="scripts/scan.js"></script>
 </body>
 
 </html>

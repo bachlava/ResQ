@@ -6,50 +6,6 @@ body {
 	background-color: #00417F;
 }
 
-#wrapper {
-	text-align: center;
-}
-
-#confirm-prompt {
-	margin-top: 1em;
-}
-
-#restaurant-img-cropper {
-	display: inline-block;
-  overflow: hidden;
-	width: 300px;
-  height: 300px;
-  border-radius: 50%;
-}
-
-#restaurant-img-cropper img {
-  display: inline;
-  margin: 0 auto;
-  height: 100%;
-	width: auto;
-}
-
-#restaurant-container h4 {
-	top: 3em;
-	z-index: 1;
-	position: relative;
-	background: rgba(255, 255, 255, 0.75);
-	color: black;
-}
-
-#yes-no {
-	min-width: 300px;
-	max-width: 650px;
-	margin: 2em auto;
-	font-size: 20pt;
-	display: flex;
-}
-
-#yes-no form {
-	display: inline-block;
-	margin: auto;
-}
-
 .circle {
 	width: 350px;
 	height: 350px;
@@ -126,6 +82,92 @@ body {
 	font-weight: bold;
 }
 
+.popup-box {
+	text-align: center;
+	margin: auto;
+	width: 100%;
+	margin-top: 50px;
+	background-color: whitesmoke;
+	border: bisque solid 5px;
+}
+
+.imagebox {
+	background: white;
+	border-radius: 50%;
+	shape-outside: circle();
+}
+
+.listalignment {
+	min-width: 300px;
+	max-width: 650px;
+	margin: 2em auto;
+	font-size: 20pt;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link  {
+	color: #EEEEEE;
+	
+}
+
+a:visited  {
+	color: #EEEEEE;
+}
+
+a:hover  {
+	color: white;
+	text-decoration: none;
+}
+
+#wrapper {
+	text-align: center;
+}
+
+#confirm-prompt {
+	margin-top: 1em;
+}
+
+#restaurant-img-cropper {
+	display: inline-block;
+  overflow: hidden;
+	width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+#restaurant-img-cropper img {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+	width: auto;
+}
+
+#restaurant-container h4 {
+	top: 3em;
+	z-index: 1;
+	position: relative;
+	background: rgba(255, 255, 255, 0.75);
+	color: black;
+}
+
+#yes-no {
+	min-width: 300px;
+	max-width: 650px;
+	margin: 2em auto;
+	font-size: 20pt;
+	display: flex;
+}
+
+#yes-no form {
+	display: inline-block;
+	margin: auto;
+}
+
 #circle {
 	width: 350px;
 	height: 350px;
@@ -159,26 +201,28 @@ body {
 	font-weight: bold;
 }
 
-.popup-box {
-	text-align: center;
+#camera-wrapper {
+	margin: auto;
+	width: 50%;
+	min-width: 360px;
+	position: relative;
+}
+
+#preview{
 	margin: auto;
 	width: 100%;
-	margin-top: 50px;
-	background-color: whitesmoke;
-	border: bisque solid 5px;
 }
 
-.imagebox {
-	background: white;
-	border-radius: 50%;
-	shape-outside: circle();
+#back-btn {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
 }
 
-.listalignment {
-	min-width: 300px;
-	max-width: 650px;
-	margin: 2em auto;
-	font-size: 20pt;
-	display: flex;
-	justify-content: space-evenly;
+#swap-btn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
 }
