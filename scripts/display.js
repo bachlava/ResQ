@@ -3,7 +3,7 @@ let navStart = '<nav class="navbar navbar-expand-lg navbar-dark nav-bg">'
 	+ '<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">'
 	+ '<span class="navbar-toggler-icon"></span></button>'
 	+ '<div class="collapse navbar-collapse" id="navbarTogglerDemo02">'
-	+ '<ul class="navbar-nav ml-auto">'; 
+	+ '<ul class="navbar-nav ml-auto">';
 
 let navEnd = '</ul></div></nav>';
 

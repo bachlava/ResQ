@@ -131,6 +131,14 @@ a {
 	margin-top: 1em;
 }
 
+#profile-img-cropper {
+	display: inline-block;
+  overflow: hidden;
+	width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
 #restaurant-img-cropper {
 	display: inline-block;
   overflow: hidden;
@@ -225,4 +233,8 @@ a {
 #reader {
 	min-width: 350px;
 	width: 100%;
+}
+
+#updateprofile {
+	color: black;
 }
