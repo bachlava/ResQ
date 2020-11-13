@@ -24,7 +24,7 @@ var uiConfig = {
 												ownRestaurantID: ""
                     }).then(function () {
                         console.log("New user added to firestore");
-                        window.location.assign("main.html");
+                        window.location.assign("register.html");
                     })
                     .catch(function (error) {
                         console.log("Error adding new user: " + error);

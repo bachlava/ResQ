@@ -6,7 +6,7 @@
 * [Contents](#content)
 
 ## Authors
-* The Bach Le
+* Bach Le
 * Dan Yoo
 * Garsha Iravani
 

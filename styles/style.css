@@ -110,16 +110,15 @@ a {
 	text-decoration: none;
 }
 
-a:link  {
-	color: #EEEEEE;
-	
-}
-
-a:visited  {
+#circle a:link {
 	color: #EEEEEE;
 }
 
-a:hover  {
+#circle a:visited {
+	color: #EEEEEE;
+}
+
+#circle a:hover {
 	color: white;
 	text-decoration: none;
 }

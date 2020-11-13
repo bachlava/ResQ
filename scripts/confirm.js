@@ -13,12 +13,13 @@ if (document.location.search.substring(1)) {
 			}
 		}).catch(function(error) {
 			console.log("Error getting restaurant document:", error);
+			failRetrieval();
 		});
 	} else {
-		failRetrieval()
+		failRetrieval();
 	}	
 } else {
-	failRetrieval()
+	failRetrieval();
 }
 
 function failRetrieval() {

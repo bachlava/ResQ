@@ -14,16 +14,38 @@ let noLoginNav = navStart
 	+ navEnd;
 
 firebase.auth().onAuthStateChanged(function(user) {
-	let loginNav = navStart
-		+ '<li class="nav-item"><a class="nav-link" href="login.html">Signed in as ' + user.displayName + '</a></li>'
-		+ '<li class="nav-item"><a class="nav-link" href="main.html">QR Scanner</a></li>'
-		+ '<li class="nav-item"><a class="nav-link" href="#">Settings</a></li>'
-		+ navEnd;
-
 	if (user) {
 		// User is signed in.
-		$("nav").remove()
-		$(document.body).prepend(loginNav);
+		let docRef = db.collection("users").doc(user.uid);
+		docRef.onSnapshot(function(doc) {
+			if (doc.exists) {
+				let displayName = doc.data().displayName;
+
+				let loginNav = navStart
+					+ '<li class="nav-item"><a class="nav-link" href="#.html">Signed in as ' + displayName + '</a></li>'
+					+ '<li class="nav-item"><a class="nav-link" href="main.html">QR Scanner</a></li>'
+					+ '<li class="nav-item"><a class="nav-link" href="#">Settings</a></li>'
+					+ '<li class="nav-item"><a class="nav-link" href="#" id="logout">Logout</a></li>'
+					+ navEnd;
+
+				$("nav").remove();
+				$(document.body).prepend(loginNav);
+				
+				$("#logout").click(function() {
+					firebase.auth().signOut().then(function() {
+						// Sign-out successful.
+						console.log("Logout successful.");
+					}).catch(function(error) {
+						// An error happened.
+						console.log(error);
+					});
+				});
+			} else {
+				console.log("Document does not exist.");
+			}
+		}).catch(function(error) {
+			console.log("Error getting document:", error);
+		});
 	} else {
 		// User is signed out.
 		$("nav").remove();
