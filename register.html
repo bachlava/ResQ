@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>ResQ Registration</title>
+	<title>ResQ Confirmation</title>
 	<meta name="comp1800 team 32" content="resq" />
 	<meta name="author" content="BCIT" />
 
@@ -23,37 +23,45 @@
 	<!-- Page Content -->
 	<form>
 		<div class="form-group row">
-		  <label for="inputEmail3" class="col-sm-2 col-form-label">Phone Number</label>
-		  <div class="col-sm-10">
-			<input type="text" class="form-control" id="inputEmail3" placeholder="PhoneNumber">
-		  </div>
+			<label for="inputEmail3" class="col-sm-2 col-form-label">Phone Number</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="inputEmail3" placeholder="PhoneNumber">
+			</div>
 		</div>
 		<div class="form-group row">
-		  <label for="inputPassword3" class="col-sm-2 col-form-label">Full Name</label>
-		  <div class="col-sm-10">
-			<input type="text" class="form-control" id="inputPassword3" placeholder="FullName">
-		  </div>
+			<label for="inputPassword3" class="col-sm-2 col-form-label">Full Name</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="inputPassword3" placeholder="FullName">
+			</div>
+			
 		</div>
+		<div class="form-group row">
+			<label for="inputRestaurant3" id='inputRestaurant2' class="col-sm-2 col-form-label" >Restaurant ID</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="inputRestaurant3" placeholder="RestaurantID" >
+			</div>
+			</div>
 		<fieldset class="form-group">
 		</fieldset>
 		<div class="form-group row">
-		  
-		  <div class="col-sm-10">
-			<div class="form-check">
-			  <input class="form-check-input" type="checkbox" id="gridCheck1">
-			  <label class="form-check-label" for="gridCheck1">
-				Are you a restaurant owner?
-			  </label>
-			  
+
+			<div class="col-sm-10">
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" id="gridCheck1">
+					
+					<label class="form-check-label" for="gridCheck1">
+						Are you a restaurant owner?
+					</label>
+
+				</div>
 			</div>
-		  </div>
 		</div>
 		<div class="form-group row">
-		  <div class="col-sm-10">
-			<button type="submit" class="btn btn-primary">Sign in</button>
-		  </div>
+			<div class="col-sm-10">
+				<button type="submit" class="btn btn-primary">Sign in</button>
+			</div>
 		</div>
-	  </form>
+	</form>
 	<!----------------------------------------------->
 	<!-- JS: Boostrap, Firebase, API related    -->
 	<!----------------------------------------------->
@@ -75,8 +83,53 @@
 	<!-- JS files: Your own JavaScript functions included here    -->
 	<!--------------------------------------------------------------------->
 	<script src="scripts/display.js"></script>
-	<script src="scripts/register.js"></script>
-	
+	<script src="scripts/business-side.js"></script>
+	<script>
+		$(document).ready(function () {
+			
+				$('input[type="checkbox"]').click(function () {
+				if ($(this).is(":checked")) {
+					$('#inputRestaurant3').show();
+				} else if ($(this).is(":not(:checked)")) {
+					$('#inputRestaurant3').hide();
+					
+				}
+			});
+			
+			
+			var fullNameInfo = document.getElementById("inputPassword3").value;
+			var restaurantDigits = document.getElementById("inputRestaurant3").value;
+			var phoneInfo = document.getElementById("inputEmail3").value;
+			var user = firebase.auth().currentUser;
+			uid = user.uid; 
+			$('button[type="submit"]').click(function () {
+				db.collection(user).doc(uid).set({
+						fullName: fullNameInfo,
+						ownRestaurantID: restaurantDigits,
+						phone: phoneInfo
+					})
+					.then(function () {
+						console.log("Document successfully written!");
+					})
+					.catch(function (error) {
+						console.error("Error writing document: ", error);
+					});
+
+			})
+		});
+
+
+
+
+		// $(".form-check-input").click(function(e) {
+		// 	$("#restaurant-name").show();
+		// 	})
+		// 	$(".form-check-input").on("unselected", function(e) {
+		// 	$("#restaurant-name").hide();
+		// 	$("#restaurant-name").html("");
+		// 	})
+	</script>
+
 </body>
 
 </html>
