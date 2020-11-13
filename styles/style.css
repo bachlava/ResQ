@@ -204,7 +204,7 @@ a:hover  {
 #camera-wrapper {
 	margin: auto;
 	width: 50%;
-	min-width: 360px;
+	min-width: 350px;
 	position: relative;
 }
 
@@ -221,4 +221,9 @@ a:hover  {
 	right: 0;
 	z-index: 1;
 	display: none;
+}
+
+#reader {
+	min-width: 350px;
+	width: 100%;
 }

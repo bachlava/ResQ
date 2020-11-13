@@ -28,7 +28,8 @@ Content of the project folder:
 ├── .gitignore               # Git ignore file
 ├── index.html               # Landing page
 ├── login.html               # Login page
-├── ResQMainPage.html        # Main page after logging in, QR launcher
+├── register.html            # Registration step 2 page
+├── main.html        # Main page after logging in, QR launcher
 ├── scan.html                # QR scanner page
 ├── confirm.html             # Restaurant confirmation page
 ├── 404.html                 # Default "Not found" page
@@ -44,8 +45,9 @@ It has the following subfolders and files:
   /display.js                  # JavaScript for navigation bar
   /firebase_api.js             # Firebase API access configuration
   /login.js                    # Firebase auth login
+	/register.js                 # Javascript for user registration
 	/scan.js                     # Javascript for displaying QR scanner
-	/instascan.min.js            # HTML5 QR Scanner API
+	/html5-qrcode.min.js         # HTML5 QR Scanner API
 ├── styles                   # Folder for styles
   /style.css                   # CSS stylesheet
 

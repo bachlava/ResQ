@@ -1,3 +1,14 @@
+$(document).ready(function() {
+	$('input[type="checkbox"]').click(function() {
+		if($(this).is(":checked")) {
+			$("#restaurant").show();
+		} else if ($(this).is(":not(:checked)")) {
+			$("#restaurant").hide();
+			$("#restaurant").html("");
+		}
+	});
+});
+
 // Initialize the FirebaseUI Widget using Firebase.
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 var uiConfig = {
@@ -19,7 +30,7 @@ var uiConfig = {
                 db.collection("users").doc(user.uid).set({
                         
 												
-												phone: user.phone,
+												
 												
                     }).then(function () {
                         console.log("New user added to firestore");
@@ -41,7 +52,7 @@ var uiConfig = {
     },
     // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
     signInFlow: 'popup',
-    signInSuccessUrl: 'resqmainpage.html',
+    signInSuccessUrl: 'main.html',
     signInOptions: [
         // Leave the lines as is for the providers you want to offer your users.
         //firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -59,4 +70,4 @@ var uiConfig = {
 };
 // The start method will wait until the DOM is loaded.
 // Inject the login interface into the HTML
-ui.start('#firebaseui-auth-container', uiConfig);
+//ui.start('#firebaseui-auth-container', uiConfig);
