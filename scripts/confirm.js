@@ -9,6 +9,7 @@ if (document.location.search.substring(1)) {
 				$("#restaurant-img-cropper img").attr("src", doc.data().img);
 			} else {
 				console.log("No matching restaurant ID.");
+				alert("No matching restaurant ID.");
 			}
 		}).catch(function(error) {
 			console.log("Error getting restaurant document:", error);

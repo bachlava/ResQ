@@ -208,11 +208,6 @@ a:hover  {
 	position: relative;
 }
 
-#preview{
-	margin: auto;
-	width: 100%;
-}
-
 #back-btn {
 	position: absolute;
 	top: 0;
@@ -225,4 +220,5 @@ a:hover  {
 	top: 0;
 	right: 0;
 	z-index: 1;
+	display: none;
 }
