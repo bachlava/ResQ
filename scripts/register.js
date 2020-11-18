@@ -15,9 +15,9 @@ $(document).ready(function () {
 	var phoneInfo = document.getElementById("inputEmail3").value;
 	var user = firebase.auth().currentUser;
 	var uid = user.uid; 
-	$('button[type="submit"]').click(function () {
+	$('#submitID').click(function () {
 		db.collection("users").doc(uid).set({
-				fullName: fullNameInfo,
+				displayName: fullNameInfo,
 				ownRestaurantID: restaurantDigits,
 				phone: phoneInfo
 			})
