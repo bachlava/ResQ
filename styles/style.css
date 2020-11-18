@@ -110,15 +110,15 @@ a {
 	text-decoration: none;
 }
 
-#circle a:link {
+#circle a:link, .loginBox a:link, .newaccBox a:link {
 	color: #EEEEEE;
 }
 
-#circle a:visited {
+#circle a:visited, .loginBox a:visited, .newaccBox a:visited {
 	color: #EEEEEE;
 }
 
-#circle a:hover {
+#circle a:hover, .loginBox a:hover, .newaccBox a:hover {
 	color: white;
 	text-decoration: none;
 }

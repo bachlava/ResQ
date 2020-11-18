@@ -3,7 +3,7 @@ if (document.location.search.substring(1)) {
 	const restaurantID = urlParams.get('restaurantID');
 	if (restaurantID != "") {
 		let restaurant = db.collection("restaurants").doc(restaurantID);
-		restaurant.get().then(function(doc) {
+		restaurant.onSnapshot(function(doc) {
 			if (doc.exists) {
 				$("#restaurant-name").html(doc.data().name);
 				$("#restaurant-img-cropper img").attr("src", doc.data().img);

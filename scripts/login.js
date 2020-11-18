@@ -20,8 +20,8 @@ var uiConfig = {
                         displayName: user.displayName,
 												email: user.email,
 												phone: "",
-												isOwner: "",
-												ownRestaurantID: ""
+												ownRestaurantID: "",
+												fullName: ""
                     }).then(function () {
                         console.log("New user added to firestore");
                         window.location.assign("register.html");
