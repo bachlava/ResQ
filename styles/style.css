@@ -1,37 +1,31 @@
-body {
-	font-family: sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 
-.nav-bg {
-	background-color: #00417F;
+body {
+	font-family: 'Quicksand', sans-serif;
 }
 
 .circle {
 	width: 350px;
 	height: 350px;
-	background: #005AAF;
 	border-radius: 350px;
 	margin-left: auto;
 	margin-right: auto;
-	border: 1em solid #0073E0;
+	position: relative;
+	top: 12px;
 }
 
 .loginBox p {
 	height: 50px;
 	width: 100px;
-	background: #0069CC;
 	margin-left: auto;
 	margin-right: auto;
-	border: 3px solid #0082FF;
 }
 
 .newaccBox p {
 	height: 30px;
 	width: 200px;
-	background: #0069CC;
 	margin-left: auto;
 	margin-right: auto;
-	border: 3px solid #0082FF;
 }
 
 .grid {
@@ -40,13 +34,12 @@ body {
 	display: grid;
 	grid-template-columns: 100%;
 	grid-template-rows: 25em 5em 5em;
-	color: white;
 }
 
 .welcome {
 	grid-area: 1 / 1 / span 1 / span 1;
 	display: flex;
-	align-items: center; 
+	align-items: center;
 	justify-content: center;
 }
 
@@ -59,24 +52,24 @@ body {
 .login {
 	grid-area: 2 / 1 / span 1 / span 1;
 	display: flex;
-	align-items: center; 
+	align-items: center;
 	justify-content: center;
 }
 
-.login p{
+.login p {
 	font-size: 24pt;
 	text-align: center;
 	font-weight: bold;
 }
 
-.newacc{
+.newacc {
 	grid-area: 3 / 1 / span 1 / span 1;
 	display: flex;
-	align-items: top; 
+	align-items: top;
 	justify-content: center;
 }
 
-.newacc p{
+.newacc p {
 	font-size: 12pt;
 	text-align: center;
 	font-weight: bold;
@@ -87,12 +80,9 @@ body {
 	margin: auto;
 	width: 100%;
 	margin-top: 50px;
-	background-color: whitesmoke;
-	border: bisque solid 5px;
 }
 
 .imagebox {
-	background: white;
 	border-radius: 50%;
 	shape-outside: circle();
 }
@@ -110,16 +100,9 @@ a {
 	text-decoration: none;
 }
 
-#circle a:link, .loginBox a:link, .newaccBox a:link {
-	color: #EEEEEE;
-}
-
-#circle a:visited, .loginBox a:visited, .newaccBox a:visited {
-	color: #EEEEEE;
-}
-
-#circle a:hover, .loginBox a:hover, .newaccBox a:hover {
-	color: white;
+#circle a:hover,
+.loginBox a:hover,
+.newaccBox a:hover {
 	text-decoration: none;
 }
 
@@ -133,24 +116,24 @@ a {
 
 #profile-img-cropper {
 	display: inline-block;
-  overflow: hidden;
+	overflow: hidden;
 	width: 300px;
-  height: 300px;
-  border-radius: 50%;
+	height: 300px;
+	border-radius: 50%;
 }
 
 #restaurant-img-cropper {
 	display: inline-block;
-  overflow: hidden;
+	overflow: hidden;
 	width: 300px;
-  height: 300px;
-  border-radius: 50%;
+	height: 300px;
+	border-radius: 50%;
 }
 
 #restaurant-img-cropper img {
-  display: inline;
-  margin: 0 auto;
-  height: 100%;
+	display: inline;
+	margin: 0 auto;
+	height: 100%;
 	width: auto;
 }
 
@@ -158,8 +141,6 @@ a {
 	top: 3em;
 	z-index: 1;
 	position: relative;
-	background: rgba(255, 255, 255, 0.75);
-	color: black;
 }
 
 #yes-no {
@@ -178,22 +159,28 @@ a {
 #circle {
 	width: 350px;
 	height: 350px;
-	background: #0082FF;
 	border-radius: 350px;
 	margin-left: auto;
 	margin-right: auto;
-	color: white;
-	border: 1em solid #00417F;
+	position: relative;
+	top: 12px;
+	z-index: 1;
+}
+
+#circlebackground {
+	width: 375px;
+	height: 375px;
+	border-radius: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
 }
 
 #bar {
 	width: 350px;
 	height: 50px;
-	background: #0069CC;
 	margin-left: auto;
 	margin-right: auto;
-	color: white;
-	border: 3px solid #0082FF;
 }
 
 #circle p {
@@ -233,8 +220,4 @@ a {
 #reader {
 	min-width: 350px;
 	width: 100%;
-}
-
-#updateprofile {
-	color: black;
 }

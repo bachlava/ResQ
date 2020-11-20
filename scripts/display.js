@@ -10,7 +10,6 @@ let navEnd = '</ul></div></nav>';
 let noLoginNav = navStart
 	+ '<li class="nav-item"><a class="nav-link" href="login.html">Login/Signup</a></li>'
 	+ '<li class="nav-item"><a class="nav-link" href="main.html">QR Scanner</a></li>'
-	+ '<li class="nav-item"><a class="nav-link" href="#">Settings</a></li>'
 	+ navEnd;
 
 firebase.auth().onAuthStateChanged(function(user) {
@@ -24,7 +23,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 				let loginNav = navStart
 					+ '<li class="nav-item"><a class="nav-link" href="#.html">Signed in as ' + displayName + '</a></li>'
 					+ '<li class="nav-item"><a class="nav-link" href="main.html">QR Scanner</a></li>'
-					+ '<li class="nav-item"><a class="nav-link" href="#">Settings</a></li>'
 					+ '<li class="nav-item"><a class="nav-link" href="#" id="logout">Logout</a></li>'
 					+ navEnd;
 
@@ -43,8 +41,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 			} else {
 				console.log("Document does not exist.");
 			}
-		}).catch(function(error) {
-			console.log("Error getting document:", error);
 		});
 	} else {
 		// User is signed out.
