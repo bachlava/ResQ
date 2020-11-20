@@ -237,3 +237,19 @@ a {
 .form-container label {
 	text-align: right;
 }
+
+#image-scan {
+	width: 40%;
+	display: table-cell;
+	
+	
+}
+#image-span {
+	
+	width: 10%;
+	display: inline-table;
+}
+
+#image-login {
+	width: 20%;
+}
