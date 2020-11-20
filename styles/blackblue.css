@@ -1,0 +1,138 @@
+.nav-bg {
+	background-image: linear-gradient(-45deg, #4a4969, #71b1bf, #3A4EBD);
+}
+
+.circle {
+	color: white;
+	background: linear-gradient(133deg, #4a4969, #71b1bf, #3a4ebd);
+	background-size: 200% 200%;
+	-webkit-animation: Heartbeat 4s ease infinite;
+	-moz-animation: Heartbeat 4s ease infinite;
+	animation: Heartbeat 4s ease infinite;
+}
+
+.loginBox p {
+	background: linear-gradient(133deg, #4a4969, #71b1bf, #3a4ebd);
+	background-size: 200% 200%;
+	-webkit-animation: Heartbeat 4s ease infinite;
+	-moz-animation: Heartbeat 4s ease infinite;
+	animation: Heartbeat 4s ease infinite;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.newaccBox p {
+	background: linear-gradient(133deg, #4a4969, #71b1bf, #3a4ebd);
+	background-size: 200% 200%;
+	-webkit-animation: Heartbeat 4s ease infinite;
+	-moz-animation: Heartbeat 4s ease infinite;
+	animation: Heartbeat 4s ease infinite;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.grid {
+	color: white;
+}
+
+.popup-box {
+	background-color: whitesmoke;
+	border: bisque solid 5px;
+}
+
+.imagebox {
+	background: white;
+}
+
+#circle a:link,
+.loginBox a:link,
+.newaccBox a:link {
+	color: #EEEEEE;
+}
+
+#circle a:visited,
+.loginBox a:visited,
+.newaccBox a:visited {
+	color: #EEEEEE;
+}
+
+#circle a:hover,
+.loginBox a:hover,
+.newaccBox a:hover {
+	color: white;
+}
+
+#restaurant-container h4 {
+	background: rgba(255, 255, 255, 0.75);
+	color: black;
+}
+
+#circle {
+	color: white;
+	background: linear-gradient(133deg, #4a4969, #71b1bf, #3a4ebd);
+	background-size: 200% 200%;
+	-webkit-animation: Heartbeat 4s ease infinite;
+	-moz-animation: Heartbeat 4s ease infinite;
+	animation: Heartbeat 4s ease infinite;
+}
+
+@-webkit-keyframes Heartbeat {
+	0% {
+		background-position: 0% 52%
+	}
+
+	50% {
+		background-position: 100% 49%
+	}
+
+	100% {
+		background-position: 0% 52%
+	}
+}
+
+@-moz-keyframes Heartbeat {
+	0% {
+		background-position: 0% 52%
+	}
+
+	50% {
+		background-position: 100% 49%
+	}
+
+	100% {
+		background-position: 0% 52%
+	}
+}
+
+@keyframes Heartbeat {
+	0% {
+		background-position: 0% 52%
+	}
+
+	50% {
+		background-position: 100% 49%
+	}
+
+	100% {
+		background-position: 0% 52%
+	}
+}
+
+#circlebackground {
+	background-image: linear-gradient(-45deg, #411651, #9B59B5, #4a4969);
+	color: white;
+}
+
+
+#bar {
+	background: linear-gradient(133deg, #4a4969, #71b1bf, #3a4ebd);
+	background-size: 200% 200%;
+	-webkit-animation: Heartbeat 4s ease infinite;
+	-moz-animation: Heartbeat 4s ease infinite;
+	animation: Heartbeat 4s ease infinite;
+	color: white;
+}
+
+#updateprofile {
+	color: black;
+}
