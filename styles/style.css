@@ -223,33 +223,25 @@ a {
 }
 
 .form-container {
-	min-width: 300px;
+	min-width: 350px;
 	width: 50%;
 	margin: 1em auto;
-
+	border-radius: 1em;
+	padding: 1em 0 1em 0;
 }
 
 .form-container h3 {
 	margin: 1em auto;
 }
 
-
-.form-container label {
-	text-align: right;
+@media only screen and (max-width: 600px) {
+	.form-container label {
+		text-align: left;
+	}
 }
 
-#image-scan {
-	width: 40%;
-	display: table-cell;
-	
-	
-}
-#image-span {
-	
-	width: 10%;
-	display: inline-table;
-}
-
-#image-login {
-	width: 20%;
+@media only screen and (min-width: 600px) {
+	.form-container label {
+		text-align: right;
+	}
 }

@@ -8,8 +8,8 @@ let navStart = '<nav class="navbar navbar-expand-lg navbar-dark nav-bg">'
 let navEnd = '</ul></div></nav>';
 
 let noLoginNav = navStart
-	+ '<li class="nav-item"><a class="nav-link" href="main.html"><img id="image-scan" src="https://static.thenounproject.com/png/736543-200.png" alt="scanner image"></a></li>'
-	+ '<li class="nav-item"><a class="nav-link" href="login.html"><img id="image-login" src="https://cdn4.iconfinder.com/data/icons/barcode-linear-outline/300/184532475Untitled-3-512.png" alt="scanner image">QR Scanner</a></li>'
+	+ '<li class="nav-item"><a class="nav-link" href="login.html"><img id="image-login" src="https://cdn4.iconfinder.com/data/icons/barcode-linear-outline/300/184532475Untitled-3-512.png" alt="scanner image"></span></a></li>'
+	+ '<li class="nav-item"><a class="nav-link" href="main.html"><span><img id="image-scan" src="https://static.thenounproject.com/png/736543-200.png" alt="scanner image"></span></a></li>'
 	+ navEnd;
 	
 
