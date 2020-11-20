@@ -1,4 +1,6 @@
 $(document).ready(function () {
+	$('input[type="checkbox"]').prop('checked', false);
+
 	$('input[type="checkbox"]').click(function () {
 		if ($(this).is(":checked")) {
 			$('#inputRestaurant2').show();
