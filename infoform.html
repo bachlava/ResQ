@@ -11,7 +11,6 @@
 	<!-- Optional styles and scripts of your own -->
 	<link rel="stylesheet" href="styles/style.css" />
 	<link rel="stylesheet" href="styles/bluepurple.css" />
-
 </head>
 
 <body>
@@ -19,12 +18,33 @@
 	<!-- The following is HTML for layout -->
 	<!-------------------------------------->
 	<div id="wrapper">
-		<div id="elec-form">
-			<h3>Please enter your contact tracing information below</h3>
-			<input type="text">
-			<input type="email">
-			<input type="text">
-			<input type="submit" value="Submit">
+		<div class="form-container">
+			<h3>Please enter your contact tracing information</h3>
+			<form>
+				<div class="form-group row">
+					<label for="full-name" class="col-sm-4 col-form-label">Full Name</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" id="full-name" placeholder="Full Name" required />
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="phone" class="col-sm-4 col-form-label">Phone Number</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" id="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="email" class="col-sm-4 col-form-label">Email</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" id="email" placeholder="Email" />
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-12">
+						<button id="submit-btn" type="submit" class="btn btn-primary">Submit</button>
+					</div>
+				</div>
+			</form>
 		</div>
 	</div>
 

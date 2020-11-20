@@ -221,3 +221,19 @@ a {
 	min-width: 350px;
 	width: 100%;
 }
+
+.form-container {
+	min-width: 300px;
+	width: 50%;
+	margin: 1em auto;
+
+}
+
+.form-container h3 {
+	margin: 1em auto;
+}
+
+
+.form-container label {
+	text-align: right;
+}
