@@ -1,32 +1,50 @@
-$(document).ready(() => {
-	if (document.location.search.substring(1)) {
-		const urlParams = new URLSearchParams(document.location.search.substring(1));
-		const restaurantID = urlParams.get('restaurantID');
-		if (restaurantID != "") {
+if (document.location.search.substring(1)) {
+	const urlParams = new URLSearchParams(document.location.search.substring(1).toLowerCase());
+	const restaurantID = urlParams.get('restaurantid');
+	
+	if (restaurantID != '') {
+		$('#submit-btn').click((e) => {
+			e.preventDefault();
+			let today = new Date();
+			let dd = today.getDate();
+			let mm = today.getMonth() + 1; 
+			mm = (mm < 10) ? '0' + mm : mm;
+			let yyyy = today.getFullYear();
+			let hour = today.getHours();
+			let min = today.getMinutes();
+			let sec = today.getSeconds();
 
-		} else {
-			failRetrieval();
-		}	
+			let logID = '' + yyyy + mm + dd + hour + min + sec + restaurantID;
+			let formattedDateTime = yyyy + '-' + mm + '-' + dd + ' ' + hour + ':' + min + ':' + sec;
+
+			let name = $('#full-name').val();
+			let phoneNo = $('#phone').val().replaceAll('-', '');
+			let emailAdd = $('#email').val();
+
+			db.collection('logs').doc(logID).set({
+				user: {
+					fullName: name,
+					phone: phoneNo,
+					email: emailAdd
+				},
+				dateTime: formattedDateTime,
+				restID: restaurantID,
+				userID: db.doc('/users/anonymous')
+			}).then(function () {
+				console.log('New log added to firestore');
+				window.location.assign('main.html');
+			}).catch(function (error) {
+				console.log('Error adding new log: ' + error);
+			});							
+		});
 	} else {
 		failRetrieval();
-	}
-	
-	function failRetrieval() {
-		$("form").hide();
-		$(".form-container h3").html("No restaurant defined, please try again.");
-	}
+	}	
+} else {
+	failRetrieval();
+}
 
-
-
-	$("#submit-btn").click(() => {
-		db.collection("logs").doc().set({
-			
-		}).then(function () {
-				console.log("New user added to firestore");
-				window.location.assign("register.html");
-		})
-		.catch(function (error) {
-				console.log("Error adding new user: " + error);
-		});
-	});
-});
+function failRetrieval() {
+	$('form').hide();
+	$('.form-container h3').html('No restaurant defined, please try again.');
+}
