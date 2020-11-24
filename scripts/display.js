@@ -8,8 +8,8 @@ let navStart = '<nav class="navbar navbar-expand-lg navbar-dark nav-bg">'
 let navEnd = '</ul></div></nav>';
 
 let noLoginNav = navStart
-	+ '<li class="nav-item"><a class="nav-link" href="login.html"><img src="images/login-icon.png" /> Login</a></li>'
-	+ '<li class="nav-item"><a class="nav-link" href="main.html"><img src="images/qr-icon.png" />QR Scanner</a></li>'
+	+ '<li class="nav-item"><a class="nav-link" href="main.html"><i class="fas fa-qrcode"></i> QR Scanner</a></li>'
+	+ '<li class="nav-item"><a class="nav-link" href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>'
 	+ navEnd;
 
 firebase.auth().onAuthStateChanged(function(user) {
@@ -21,9 +21,9 @@ firebase.auth().onAuthStateChanged(function(user) {
 				let displayName = doc.data().displayName;
 
 				let loginNav = navStart
-					+ '<li class="nav-item"><a class="nav-link" href="#.html"><img src="images/profile-icon.png" />'+ displayName + '</a></li>'
-					+ '<li class="nav-item"><a class="nav-link" href="main.html"><img src="images/qr-icon.png" />QR Scanner</a></li>'
-					+ '<li class="nav-item"><a class="nav-link" href="#" id="logout"><img src="images/logout-icon.png" />Logout</a></li>'
+					+ '<li class="nav-item"><a class="nav-link" href="main.html"><i class="fas fa-qrcode"></i> QR Scanner</a></li>'
+					+ '<li class="nav-item"><a class="nav-link" href="profile.html"><i class="fas fa-user-circle"></i> '+ displayName + '</a></li>'
+					+ '<li class="nav-item"><a class="nav-link" href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>'
 					+ navEnd;
 
 				$("nav").remove();
