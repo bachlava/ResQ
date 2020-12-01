@@ -30,9 +30,9 @@ Content of the project folder:
 ├── index.html               # Landing page
 ├── login.html               # Login page
 ├── register.html            # Registration step 2 page
-├── main.html                # Main page after logging in (launches QR Scanner)
+├── main.html                # Main page after signing in (launches QR Scanner)
 ├── scan.html                # QR scanner page
-├── infoform.html            # Contact Tracing form for not logged in users
+├── infoform.html            # Contact Tracing form for not signed-in users
 ├── confirm.html             # Restaurant confirmation page
 ├── success.html             # Confirmation success message page
 ├── profile.html             # User profile page
@@ -41,14 +41,15 @@ Content of the project folder:
 └── README.md
 
 It has the following subfolders and files:
-├── .firebase                # Folder for git Firebase Hosting
+├── .firebase                # Folder for Firebase Hosting
 ├── .git                     # Folder for git repo
 ├── images                   # Folder for images
-  /daeji.jpg                   # Restaurant image
-  /nadri.jpg                   # Restaurant image
-├── qr                       # Folder for QR code images
-  /daeji.jpg                   # Restaurant QR code image
-  /nadri.jpg                   # Restaurant QR code image	
+	├── restaurants              # Folder for restaurant images
+		/daeji.jpg                   # Restaurant image
+		/nadri.jpg                   # Restaurant image
+	├── qr                       # Folder for QR code images
+		/daeji.jpg                   # Restaurant QR code image
+		/nadri.jpg                   # Restaurant QR code image	
 ├── scripts                  # Folder for scripts
   /confirm.js                  # JavaScript for confirmation page
   /display.js                  # JavaScript for navigation bar
@@ -61,7 +62,7 @@ It has the following subfolders and files:
 	/firebase_api.js             # Firebase API access configuration
 	/html5-qrcode.min.js         # HTML5 QR Scanner API
 ├── styles                   # Folder for styles
-  /style.css                   # CSS stylesheet
+  /style.css                   # Layout stylesheet (no colour)
 	/bluepurple.css              # Main colour scheme
 	/blackblue.css               # Dark mode colour scheme
 	/greenbrownred.css           # Secondary colour scheme

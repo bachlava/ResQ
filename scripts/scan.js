@@ -1,7 +1,11 @@
+/* 
+	Periodically executes a given function when the DOM is ready. 
+	Param: fn - the function to run when the DOM is ready.
+*/
 function docReady(fn) {
-	// see if DOM is already available
+	/* See if DOM is already available. */
 	if (document.readyState === "complete" || document.readyState === "interactive") {
-			// call on next available tick
+			/* Call on next available tick. */
 			setTimeout(fn, 1);
 	} else {
 			document.addEventListener("DOMContentLoaded", fn);
