@@ -34,7 +34,7 @@ if (document.location.search.substring(1)) {
 								userID: db.doc(userRef)
 							}).then(function () {
 								console.log('New log added to firestore');
-								window.location.assign('popup.html');
+								window.location.assign('success.html');
 							}).catch(function (error) {
 								console.log('Error adding new log: ' + error);
 							});
