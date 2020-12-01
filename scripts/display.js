@@ -14,7 +14,7 @@ let noLoginNav = navStart
 
 firebase.auth().onAuthStateChanged(function(user) {
 	if (user) {
-		// User is signed in.
+		/* User is signed in. */
 		let docRef = db.collection("users").doc(user.uid);
 		docRef.onSnapshot(function(doc) {
 			if (doc.exists) {
@@ -29,12 +29,13 @@ firebase.auth().onAuthStateChanged(function(user) {
 				$("nav").remove();
 				$(document.body).prepend(loginNav);
 				
-				$("#logout").click(function() {
+				$("#logout").click(function(e) {
+					e.preventDefault();
 					firebase.auth().signOut().then(function() {
-						// Sign-out successful.
+						/* Sign-out successful. */
 						console.log("Logout successful.");
 					}).catch(function(error) {
-						// An error happened.
+						/* An error happened. */
 						console.log(error);
 					});
 				});
@@ -43,7 +44,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 			}
 		});
 	} else {
-		// User is signed out.
+		/* User is signed out. */
 		$("nav").remove();
 		$(document.body).prepend(noLoginNav);
 	}

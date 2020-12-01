@@ -1,7 +1,10 @@
+/* Retrieves the restaurant ID parameter from the URL search string. */
 if (document.location.search.substring(1)) {
 	const urlParams = new URLSearchParams(document.location.search.substring(1).toLowerCase());
 	const restaurantID = urlParams.get('restaurantid');
 	if (restaurantID != "") {
+
+		/* Reads the restaurant's info from Firestore. */
 		let restaurant = db.collection("restaurants").doc(restaurantID);
 		restaurant.onSnapshot(function(doc) {
 			if (doc.exists) {
@@ -10,7 +13,7 @@ if (document.location.search.substring(1)) {
 
 				firebase.auth().onAuthStateChanged(function(user) {
 					if (user) {
-						// User is signed in.
+						/* User is signed in. */
 						let userRef = '/users/' + user.uid;
 
 						$('input[value="Yes"]').click((e) => {
@@ -27,6 +30,7 @@ if (document.location.search.substring(1)) {
 							let logID = '' + yyyy + mm + dd + hour + min + sec + restaurantID;
 							let formattedDateTime = yyyy + '-' + mm + '-' + dd + ' ' + hour + ':' + min + ':' + sec;
 				
+							/* Writes a new Log to Firestore. */
 							db.collection('logs').doc(logID).set({
 								user: {},
 								dateTime: formattedDateTime,
@@ -40,7 +44,7 @@ if (document.location.search.substring(1)) {
 							});
 						});
 					} else {
-						// User is signed out.
+						/* User is signed out. */
 						$('input[value="Yes"]').click((e) => {
 							e.preventDefault();
 							window.location.assign('infoform.html?restaurantid=' + restaurantID);
@@ -59,6 +63,10 @@ if (document.location.search.substring(1)) {
 	failRetrieval();
 }
 
+/*
+	Hides page elements when there is no restaurant specified or 
+	Firestore failed to return restaurant information.
+*/
 function failRetrieval() {
 	$("#restaurant-name").hide();
 	$("#yes-no").hide();

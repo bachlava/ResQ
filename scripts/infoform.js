@@ -1,3 +1,4 @@
+/* Retrieves the restaurant ID parameter from the URL search string. */
 if (document.location.search.substring(1)) {
 	const urlParams = new URLSearchParams(document.location.search.substring(1).toLowerCase());
 	const restaurantID = urlParams.get('restaurantid');
@@ -21,6 +22,7 @@ if (document.location.search.substring(1)) {
 			let phoneNo = $('#phone').val().replaceAll('-', '');
 			let emailAdd = $('#email').val();
 
+			/* Writes a new Log to Firestore. */
 			db.collection('logs').doc(logID).set({
 				user: {
 					fullName: name,
@@ -44,6 +46,7 @@ if (document.location.search.substring(1)) {
 	failRetrieval();
 }
 
+/* Hides page elements when there is no restaurant specified. */
 function failRetrieval() {
 	$('form').hide();
 	$('.form-container h3').html('No restaurant defined, please try again.');
