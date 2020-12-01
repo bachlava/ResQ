@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8" />
 	<title>ResQ Registration</title>
@@ -17,53 +18,52 @@
 	<link rel="stylesheet" href="styles/style.css" />
 	<link rel="stylesheet" href="styles/bluepurple.css" />
 </head>
+
 <body>
 	<!-------------------------------------->
 	<!-- The following is HTML for layout -->
 	<!-------------------------------------->
 	<!-- Page Content -->
 	<div id="wrapper">
-	<form class="form-container">
-		<h3>Complete your registration</h3>
-		<div class="form-group row">
-			<label for="inputPassword3" class="col-sm-2 col-form-label">Full Name</label>
-			<div class="col-sm-10">
-				<input type="text" class="form-control" id="inputPassword3" placeholder="Full Name" required>
-			</div>
-		</div>
-		<div class="form-group row">
-			<label for="inputEmail3" class="col-sm-2 col-form-label">Phone Number</label>
-			<div class="col-sm-10">
-				<input type="text" class="form-control" id="inputEmail3" placeholder="Phone"
-					pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-			</div>
-		</div>
-		<div class="form-group row">
-			<label for="inputRestaurant3" id='inputRestaurant2' class="col-sm-2 col-form-label"
-				style="display: none;">Restaurant ID</label>
-			<div class="col-sm-10">
-				<input type="text" class="form-control" id="inputRestaurant3" placeholder="4-digit hex code"
-					style="display: none;"></input>
-			</div>
-		</div>
-		<fieldset class="form-group">
-		</fieldset>
-		<div class="form-group row">
-			<div class="col-sm-10">
-				<div class="form-check">
-					<input class="form-check-input" type="checkbox" id="gridCheck1" />
-					<label class="form-check-label" for="gridCheck1">
-						Are you a restaurant owner?
-					</label>
+		<form class="form-container">
+			<h3>Complete your registration</h3>
+			<div class="form-group row">
+				<label for="inputPassword3" class="col-sm-2 col-form-label">Full Name</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="inputPassword3" placeholder="Full Name" required>
 				</div>
 			</div>
-		</div>
-		<div class="form-group row">
-			<div class="col-sm-10">
-				<button id="submitID" type="submit" class="btn btn-primary">Submit</button>
+			<div class="form-group row">
+				<label for="inputEmail3" class="col-sm-2 col-form-label">Phone Number</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="inputEmail3" placeholder="Phone"
+						pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+				</div>
 			</div>
-		</div>
-	</form>
+			<div class="form-group row">
+				<label for="inputRestaurant3" id='inputRestaurant2' class="col-sm-2 col-form-label"
+					style="display: none;">Restaurant ID</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="inputRestaurant3" placeholder="4-digit hex code"
+						style="display: none;"></input>
+				</div>
+			</div>
+			<fieldset class="form-group">
+			</fieldset>
+			<div class="form-group row">
+				<div class="col-sm-10">
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="gridCheck1" />
+						<label class="form-check-label" for="gridCheck1">Are you a restaurant owner?</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group row">
+				<div class="col-sm-10">
+					<button id="submitID" type="submit" class="btn btn-primary">Submit</button>
+				</div>
+			</div>
+		</form>
 	</div>
 	<!----------------------------------------------->
 	<!-- JS: Boostrap, Firebase, API related    -->
@@ -88,4 +88,5 @@
 	<script src="scripts/display.js"></script>
 	<script src="scripts/register.js"></script>
 </body>
+
 </html>
