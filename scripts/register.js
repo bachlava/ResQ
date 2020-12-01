@@ -17,7 +17,8 @@ $(document).ready(function () {
 	var phoneInfo = document.getElementById("inputEmail3").value;
 	var user = firebase.auth().currentUser;
 	var uid = user.uid; 
-	$('#submitID').click(function () {
+	$('#submitID').click(function (e) {
+		e.preventDefault();
 		db.collection("users").doc(uid).set({
 				displayName: fullNameInfo,
 				ownRestaurantID: restaurantDigits,
@@ -29,5 +30,6 @@ $(document).ready(function () {
 			.catch(function (error) {
 				console.error("Error writing document: ", error);
 			});
-	})
+		window.location.assign("main.html");
+	});
 });
