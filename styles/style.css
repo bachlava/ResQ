@@ -111,6 +111,11 @@ a {
 	text-decoration: none;
 }
 
+a:link {
+	text-decoration: none;
+}
+
+.circle a:hover,
 #circle a:hover,
 .loginBox a:hover,
 .newaccBox a:hover {
