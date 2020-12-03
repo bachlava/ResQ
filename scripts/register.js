@@ -12,29 +12,50 @@ $(document).ready(function () {
 		}
 	});
 
-	var fullNameInfo = document.getElementById("inputPassword3").value;
-	var restaurantDigits = document.getElementById("inputRestaurant3").value;
-	var phoneInfo = document.getElementById("inputEmail3").value;
-	var user = firebase.auth().currentUser;
-	var uid = user.uid; 
+	firebase.auth().onAuthStateChanged(function(user) {
+		if (user) {
+			/* User is signed in. */
+			let docRef = db.collection("users").doc(user.uid);
 
-	$('#submitID').click(function (e) {
-		e.preventDefault();
+			docRef.onSnapshot(function(doc) {
+				if (doc.exists) {
+					let uid = user.uid; 
 
-		/* Updates a user in Firestore. */
-		db.collection("users").doc(uid).set({
-				displayName: fullNameInfo,
-				ownRestaurantID: restaurantDigits,
-				phone: phoneInfo
-			})
-			.then(function () {
-				console.log("Document successfully written!");
-			})
-			.catch(function (error) {
-				console.error("Error writing document: ", error);
+					$('#submitID').click(function (e) {
+						e.preventDefault();
+						let fullNameInfo = document.getElementById("inputPassword3").value;
+						let restaurantDigits = document.getElementById("inputRestaurant3").value;
+						let phoneInfo = document.getElementById("inputEmail3").value;
+
+						/* Updates a user in Firestore. */
+						return docRef.update({
+							fullName: fullNameInfo,
+							ownRestaurantID: restaurantDigits,
+							phone: phoneInfo
+						}).then(function () {
+							console.log("User successfully updated.");
+							window.location.assign("main.html");
+						}).catch(function (error) {
+							console.error("Error updating user: ", error);
+						});
+					});
+				} else {
+					console.log("User does not exist.");
+					failRetrieval();
+				}
 			});
-		window.location.assign("main.html");
+		} else {
+			/* User is signed out. */
+			failRetrieval();
+		}
 	});
 });
 
-	
+/*
+	Hides page elements when there is no logged in user or 
+	Firestore failed to retrieve logged in user.
+*/
+function failRetrieval() {
+	$('form').hide();
+	$('.form-container h3').html('No user currently logged in, please log in and try again.');
+}

@@ -142,10 +142,7 @@ body {
 #circlebackground {
 	background-image: linear-gradient(-45deg, #411651, #9B59B5, #E9C1FF);
 	color: white;
-
-
 }
-
 
 #bar {
 	background: linear-gradient(133deg, #afb9fe, #71b1bf, #3a4ebd);
@@ -157,7 +154,7 @@ body {
 }
 
 #updateprofile {
-	color: black;
+	color: white;
 }
 
 .form-container {

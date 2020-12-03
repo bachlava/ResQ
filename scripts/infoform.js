@@ -34,7 +34,7 @@ if (document.location.search.substring(1)) {
 				userID: db.doc('/users/anonymous')
 			}).then(function () {
 				console.log('New log added to firestore');
-				window.location.assign('main.html');
+				window.location.assign('success.html?restaurantid=' + restaurantID);
 			}).catch(function (error) {
 				console.log('Error adding new log: ' + error);
 			});							
