@@ -38,7 +38,7 @@ if (document.location.search.substring(1)) {
 								userID: db.doc(userRef)
 							}).then(function () {
 								console.log('New log added to firestore');
-								window.location.assign('success.html');
+								window.location.assign('success.html?restaurantid=' + restaurantID);
 							}).catch(function (error) {
 								console.log('Error adding new log: ' + error);
 							});
@@ -53,7 +53,7 @@ if (document.location.search.substring(1)) {
 				});
 			} else {
 				console.log("No matching restaurant ID.");
-				alert("No matching restaurant ID.");
+				failRetrieval();
 			}
 		});
 	} else {
