@@ -1,3 +1,6 @@
+/*
+	Still missing logic for processing the profile update form (not MVP).
+ */
 $(document).ready(function () {
 	var user = firebase.auth().currentUser;
 

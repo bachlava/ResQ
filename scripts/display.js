@@ -42,6 +42,13 @@ firebase.auth().onAuthStateChanged(function(user) {
 				});
 			} else {
 				console.log("Document does not exist.");
+				firebase.auth().signOut().then(function() {
+					/* Sign-out successful. */
+					console.log("Logout successful.");
+				}).catch(function(error) {
+					/* An error happened. */
+					console.log(error);
+				});
 			}
 		});
 	} else {
